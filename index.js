@@ -1,6 +1,6 @@
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+let app = require('express')();
+let http = require('http').Server(app);
+let io = require('socket.io')(http);
 let fs=require('fs')
 
 //PROCESS PORT
