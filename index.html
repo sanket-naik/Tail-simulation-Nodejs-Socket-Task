@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Task</title>
+
+  </head>
+  <body>
+    <b>Tail Simulation:</b>
+    <br><b><span>Last 5 Items:</span></b> <span id="target">No data in logger.txt</span>
+  </body>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <script>
+    $(function () {
+      var socket = io();
+
+      socket.on('tail', function(data) {
+        $('#target').text(data);
+      });
+
+    });
+  </script>
+</html>
